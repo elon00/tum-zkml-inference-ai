@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "tum-zkml-inference-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "TUM Munich",
+        "PROJECT_TICKER": "TUMZKML"
+      },
+      "tools": [
+        {
+          "name": "verify_tumzkml_invariants",
+          "description": "Verifies deterministic invariants for TUM zkML Inference AI on TUM Munich."
+        },
+        {
+          "name": "execute_tumzkml_action",
+          "description": "Executes authenticated zkML state transition."
+        }
+      ]
+    }
+  }
+}
